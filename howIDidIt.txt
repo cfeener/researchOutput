@@ -1,13 +1,8 @@
+	/*Git already installed; unnec.*/
   531  sudo apt-get install git
   532  git clone https://github.com/agrpallav/qemu-copypaste.git
   533  sudo apt-get install gpm
-  534  .4-6.1_amd64.deb ...
-  535  Unpacking gpm (1.20.4-6.1) ...
-  536  Processing triggers for ureadahead (0.100.0-16) ...
-  537  ureadahead will be reprofiled on next reboot
-  538  Processing triggers for install-info (5.2.0.dfsg.1-2) ...
-  539  Processing triggers for man-db (2.6.7.1-1) ...
-  540  Setting up gpm (1.20.4-6.1) ...
+	/*Accidental Output onto Command Line was here*/
   541  history
   542  apt-get install qemu-ga
   543  sudo apt-get install qemu-ga
@@ -17,21 +12,27 @@
   547  ls
   548  history | less
   549  ls
+	/*Write runExp with clearCache at beginning!*/
   550  vi runExp
   551  clear
   552  ls
+	/*Run bash script for experiment*/
   553  bash runExp
   554  sudo poweroff
   555  ls
   556  bash runExp
   557  cd YCSB/
   558  ls
+	/*Go to workloads*/
   559  cd workloads/
   560  ls
+	/*Edit one of workloads A-F*/
   561  vi workloada
+	/*Go back, and clone git repo*/
   562  cd ../..
   563  ls
   564  bash runExp
+	/*Clone my own repo*/
   565  git clone https://c.feener@gitlab.encs.vancouver.wsu.edu/c.feener/researchOutput.git
   566  ls
   567  cd researchOutput/
@@ -43,10 +44,12 @@
   573  vi my_output
   574  cd ..
   575  ls
+	/*runExp should already do this*/
   576  bash runExp >> researchOutput/my_output
   578  cd researchOutput/
   579  git add .
   580  git commit
+	/*Config image VM for my repo.*/
   581  git config --global user.email "christopher.feener@wsu.edu"
   582  git config --global user.name "Christopher Feener"
   583  git commit
