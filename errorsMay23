@@ -1,0 +1,89 @@
+Errors were for 200k.
+
+[WARN]  Running against a source checkout. In order to get our runtime dependencies we'll have to invoke Maven. Depending on the state of your system, this may take ~30-45 seconds
+[DEBUG]  Running 'mvn -pl com.yahoo.ycsb:mapkeeper-binding -am package -DskipTests dependency:build-classpath -DincludeScope=compile -Dmdep.outputFilterFile=true'
+java -cp /home/hduser/YCSB/mapkeeper/conf:/home/hduser/YCSB/mapkeeper/target/mapkeeper-binding-0.11.0-SNAPSHOT.jar:/home/hduser/.m2/repository/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar:/home/hduser/YCSB/core/target/core-0.11.0-SNAPSHOT.jar:/home/hduser/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/hduser/.m2/repository/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar:/home/hduser/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar:/home/hduser/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/hduser/.m2/repository/com/yahoo/mapkeeper/mapkeeper/1.0/mapkeeper-1.0.jar:/home/hduser/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.4/jackson-core-asl-1.9.4.jar:/home/hduser/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.4/HdrHistogram-2.1.4.jar:/home/hduser/.m2/repository/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar:/home/hduser/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.4/jackson-mapper-asl-1.9.4.jar:/home/hduser/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar com.yahoo.ycsb.Client -db com.yahoo.ycsb.db.MapKeeperClient -p mapkeeper.port=9090 -P workloads/workloada -threads 4 -t
+YCSB Client 0.11.0-SNAPSHOT
+Command line: -db com.yahoo.ycsb.db.MapKeeperClient -p mapkeeper.port=9090 -P workloads/workloada -threads 4 -t
+Loading workload...
+Starting test.
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Exception in thread "Thread-5" java.lang.RuntimeException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:72)
+        at com.yahoo.ycsb.DBWrapper.init(DBWrapper.java:99)
+        at com.yahoo.ycsb.ClientThread.run(Client.java:418)
+        at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:226)
+        at org.apache.thrift.transport.TFramedTransport.open(TFramedTransport.java:81)
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:69)
+        ... 3 more
+Caused by: java.net.ConnectException: Connection refused
+        at java.net.PlainSocketImpl.socketConnect(Native Method)
+        at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+        at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+        at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+        at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+        at java.net.Socket.connect(Socket.java:579)
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:221)
+        ... 5 more
+Exception in thread "Thread-3" java.lang.RuntimeException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:72)
+        at com.yahoo.ycsb.DBWrapper.init(DBWrapper.java:99)
+        at com.yahoo.ycsb.ClientThread.run(Client.java:418)
+        at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:226)
+        at org.apache.thrift.transport.TFramedTransport.open(TFramedTransport.java:81)
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:69)
+        ... 3 more
+Caused by: java.net.ConnectException: Connection refused
+        at java.net.PlainSocketImpl.socketConnect(Native Method)
+        at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+        at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+        at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+        at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+        at java.net.Socket.connect(Socket.java:579)
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:221)
+        ... 5 more
+Exception in thread "Thread-2" java.lang.RuntimeException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:72)
+        at com.yahoo.ycsb.DBWrapper.init(DBWrapper.java:99)
+        at com.yahoo.ycsb.ClientThread.run(Client.java:418)
+        at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:226)
+        at org.apache.thrift.transport.TFramedTransport.open(TFramedTransport.java:81)
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:69)
+        ... 3 more
+Caused by: java.net.ConnectException: Connection refused
+        at java.net.PlainSocketImpl.socketConnect(Native Method)
+        at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+        at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+        at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+        at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+        at java.net.Socket.connect(Socket.java:579)
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:221)
+        ... 5 more
+Exception in thread "Thread-5" java.lang.RuntimeException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:72)
+        at com.yahoo.ycsb.DBWrapper.init(DBWrapper.java:99)
+        at com.yahoo.ycsb.ClientThread.run(Client.java:418)
+        at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:226)
+        at org.apache.thrift.transport.TFramedTransport.open(TFramedTransport.java:81)
+        at com.yahoo.ycsb.db.MapKeeperClient.init(MapKeeperClient.java:69)
+        ... 3 more
+Caused by: java.net.ConnectException: Connection refused
+        at java.net.PlainSocketImpl.socketConnect(Native Method)
+        at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+        at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+        at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+        at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+        at java.net.Socket.connect(Socket.java:579)
+        at org.apache.thrift.transport.TSocket.open(TSocket.java:221)
+        ... 5 more
+
