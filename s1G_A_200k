@@ -3,14 +3,4 @@ This is the file for recording Size 1G, workload A, 200k records. The average is
 Run 1/3:
 
 
-[OVERALL], RunTime(ms), 549.0
-[OVERALL], Throughput(ops/sec), 0.0
-[TOTAL_GCS_MarkSweepCompact], Count, 0.0
-[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
-[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
-[TOTAL_GCS_Copy], Count, 1.0
-[TOTAL_GC_TIME_Copy], Time(ms), 8.0
-[TOTAL_GC_TIME_%_Copy], Time(%), 1.4571948998178506
-[TOTAL_GCs], Count, 1.0
-[TOTAL_GC_TIME], Time(ms), 8.0
-[TOTAL_GC_TIME_%], Time(%), 1.4571948998178506
+
