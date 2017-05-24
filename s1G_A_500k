@@ -1,0 +1,106 @@
+Size 1G, workload A, 500k: 
+
+
+Run 1/3:
+
+[OVERALL], RunTime(ms), 11595.0
+[OVERALL], Throughput(ops/sec), 1724.88141440276
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 13.0
+[TOTAL_GC_TIME_Copy], Time(ms), 14.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.12074169900819318
+[TOTAL_GCs], Count, 13.0
+[TOTAL_GC_TIME], Time(ms), 14.0
+[TOTAL_GC_TIME_%], Time(%), 0.12074169900819318
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 0.75
+[CLEANUP], MinLatency(us), 0.0
+[CLEANUP], MaxLatency(us), 1.0
+[CLEANUP], 95thPercentileLatency(us), 1.0
+[CLEANUP], 99thPercentileLatency(us), 1.0
+[READ], Operations, 10014.0
+[READ], AverageLatency(us), 1868.359696425005
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 289279.0
+[READ], 95thPercentileLatency(us), 5439.0
+[READ], 99thPercentileLatency(us), 35775.0
+[READ], Return=OK, 10014
+[UPDATE], Operations, 9986.0
+[UPDATE], AverageLatency(us), 2485.8365711996794
+[UPDATE], MinLatency(us), 61.0
+[UPDATE], MaxLatency(us), 297983.0
+[UPDATE], 95thPercentileLatency(us), 7027.0
+[UPDATE], 99thPercentileLatency(us), 38175.0
+[UPDATE], Return=OK, 9986
+
+
+Run 2/3:
+
+[OVERALL], RunTime(ms), 11193.0
+[OVERALL], Throughput(ops/sec), 1786.831055123738
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 13.0
+[TOTAL_GC_TIME_Copy], Time(ms), 15.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.13401232913428035
+[TOTAL_GCs], Count, 13.0
+[TOTAL_GC_TIME], Time(ms), 15.0
+[TOTAL_GC_TIME_%], Time(%), 0.13401232913428035
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.0
+[CLEANUP], MinLatency(us), 0.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[READ], Operations, 10065.0
+[READ], AverageLatency(us), 1814.0202682563338
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 137727.0
+[READ], 95thPercentileLatency(us), 5087.0
+[READ], 99thPercentileLatency(us), 36991.0
+[READ], Return=OK, 10065
+[UPDATE], Operations, 9935.0
+[UPDATE], AverageLatency(us), 2321.057473578259
+[UPDATE], MinLatency(us), 59.0
+[UPDATE], MaxLatency(us), 138239.0
+[UPDATE], 95thPercentileLatency(us), 6751.0
+[UPDATE], 99thPercentileLatency(us), 37055.0
+[UPDATE], Return=OK, 9935
+
+
+Run 3/3:
+
+[OVERALL], RunTime(ms), 11349.0
+[OVERALL], Throughput(ops/sec), 1762.269803506917
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 13.0
+[TOTAL_GC_TIME_Copy], Time(ms), 17.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.14979293329808796
+[TOTAL_GCs], Count, 13.0
+[TOTAL_GC_TIME], Time(ms), 17.0
+[TOTAL_GC_TIME_%], Time(%), 0.14979293329808796
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 0.75
+[CLEANUP], MinLatency(us), 0.0
+[CLEANUP], MaxLatency(us), 1.0
+[CLEANUP], 95thPercentileLatency(us), 1.0
+[CLEANUP], 99thPercentileLatency(us), 1.0
+[READ], Operations, 10080.0
+[READ], AverageLatency(us), 1777.294742063492
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 263167.0
+[READ], 95thPercentileLatency(us), 4907.0
+[READ], 99thPercentileLatency(us), 37503.0
+[READ], Return=OK, 10080
+[UPDATE], Operations, 9920.0
+[UPDATE], AverageLatency(us), 2463.7547379032258
+[UPDATE], MinLatency(us), 59.0
+[UPDATE], MaxLatency(us), 254847.0
+[UPDATE], 95thPercentileLatency(us), 7355.0
+[UPDATE], 99thPercentileLatency(us), 40895.0
+[UPDATE], Return=OK, 9920

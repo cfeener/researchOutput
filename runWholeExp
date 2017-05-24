@@ -1,0 +1,7 @@
+echo $'Run 1/3:' >> ~/researchOutput/s1G_A_500k
+bash doRun
+echo $'Run 2/3:' >> ~/researchOutput/s1G_A_500k
+bash doRun
+echo $'Run 3/3:' >> ~/researchOutput/s1G_A_500k
+bash doRun
+
