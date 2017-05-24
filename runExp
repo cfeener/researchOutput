@@ -1,3 +1,4 @@
+bash clearCache
 cd ~/mapkeeper/leveldb
 ./mapkeeper_leveldb &
 cd ~/YCSB
