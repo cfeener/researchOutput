@@ -1,7 +1,7 @@
-echo $'Size 1G, workload B, 10k records:' >> ~/researchOutput/s1G_B_10k
-echo $'\n\nRun 1/3:\n' >> ~/researchOutput/s1G_B_10k
+echo $'Size 1G, workload B, 1k records:' >> ~/researchOutput/s1G_B_1k
+echo $'\n\nRun 1/3:\n' >> ~/researchOutput/s1G_B_1k
 bash doTrial
-echo $'\n\nRun 2/3:\n' >> ~/researchOutput/s1G_B_10k
+echo $'\n\nRun 2/3:\n' >> ~/researchOutput/s1G_B_1k
 bash doTrial
-echo $'\n\nRun 3/3:\n' >> ~/researchOutput/s1G_B_10k
+echo $'\n\nRun 3/3:\n' >> ~/researchOutput/s1G_B_1k
 bash doTrial
