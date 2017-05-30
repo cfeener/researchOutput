@@ -2,4 +2,4 @@ bash clearCache
 cd ~/mapkeeper/leveldb
 ./mapkeeper_leveldb &
 cd ~/YCSB
-./bin/ycsb run mapkeeper -p mapkeeper.port=9090 -P workloads/workloadc -threads 4 >> ~/researchOutput/s1G_C_1M
+./bin/ycsb run mapkeeper -p mapkeeper.port=9090 -P workloads/workloadc -threads 4 >> ~/researchOutput/s1G_C_10k
