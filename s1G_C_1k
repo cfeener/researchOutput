@@ -1,0 +1,141 @@
+Size 1G, workload C, 1k records:
+
+
+Run 1/5:
+
+[OVERALL], RunTime(ms), 42792.0
+[OVERALL], Throughput(ops/sec), 23368.85399140026
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 339.0
+[TOTAL_GC_TIME_Copy], Time(ms), 129.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.30145821648906335
+[TOTAL_GCs], Count, 339.0
+[TOTAL_GC_TIME], Time(ms), 129.0
+[TOTAL_GC_TIME_%], Time(%), 0.30145821648906335
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.25
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[READ], Operations, 1000000.0
+[READ], AverageLatency(us), 166.792495
+[READ], MinLatency(us), 22.0
+[READ], MaxLatency(us), 149759.0
+[READ], 95thPercentileLatency(us), 339.0
+[READ], 99thPercentileLatency(us), 658.0
+[READ], Return=OK, 1000000
+
+
+Run 2/5:
+
+[OVERALL], RunTime(ms), 39483.0
+[OVERALL], Throughput(ops/sec), 25327.35607729909
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 343.0
+[TOTAL_GC_TIME_Copy], Time(ms), 127.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.32165742218169846
+[TOTAL_GCs], Count, 343.0
+[TOTAL_GC_TIME], Time(ms), 127.0
+[TOTAL_GC_TIME_%], Time(%), 0.32165742218169846
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.0
+[CLEANUP], MinLatency(us), 0.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[READ], Operations, 1000000.0
+[READ], AverageLatency(us), 154.176795
+[READ], MinLatency(us), 22.0
+[READ], MaxLatency(us), 28959.0
+[READ], 95thPercentileLatency(us), 359.0
+[READ], 99thPercentileLatency(us), 596.0
+[READ], Return=OK, 1000000
+
+
+Run 3/5:
+
+[OVERALL], RunTime(ms), 41291.0
+[OVERALL], Throughput(ops/sec), 24218.352667651547
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 343.0
+[TOTAL_GC_TIME_Copy], Time(ms), 123.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.297885737812114
+[TOTAL_GCs], Count, 343.0
+[TOTAL_GC_TIME], Time(ms), 123.0
+[TOTAL_GC_TIME_%], Time(%), 0.297885737812114
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.25
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[READ], Operations, 1000000.0
+[READ], AverageLatency(us), 160.537079
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 48927.0
+[READ], 95thPercentileLatency(us), 370.0
+[READ], 99thPercentileLatency(us), 610.0
+[READ], Return=OK, 1000000
+
+
+Run 4/5:
+
+[OVERALL], RunTime(ms), 41111.0
+[OVERALL], Throughput(ops/sec), 24324.3900659191
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 339.0
+[TOTAL_GC_TIME_Copy], Time(ms), 128.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.3113521928437644
+[TOTAL_GCs], Count, 339.0
+[TOTAL_GC_TIME], Time(ms), 128.0
+[TOTAL_GC_TIME_%], Time(%), 0.3113521928437644
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.25
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[READ], Operations, 1000000.0
+[READ], AverageLatency(us), 160.414488
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 35903.0
+[READ], 95thPercentileLatency(us), 376.0
+[READ], 99thPercentileLatency(us), 619.0
+[READ], Return=OK, 1000000
+
+
+Run 5/5:
+
+[OVERALL], RunTime(ms), 43646.0
+[OVERALL], Throughput(ops/sec), 22911.60702011639
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 339.0
+[TOTAL_GC_TIME_Copy], Time(ms), 139.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.3184713375796179
+[TOTAL_GCs], Count, 339.0
+[TOTAL_GC_TIME], Time(ms), 139.0
+[TOTAL_GC_TIME_%], Time(%), 0.3184713375796179
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.5
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 3.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 3.0
+[READ], Operations, 1000000.0
+[READ], AverageLatency(us), 170.368093
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 40095.0
+[READ], 95thPercentileLatency(us), 367.0
+[READ], 99thPercentileLatency(us), 653.0
+[READ], Return=OK, 1000000
