@@ -1,0 +1,2 @@
+git config --global user.name "Christopher Feener"
+git config --global user.email "christopher.feener@wsu.edu"
