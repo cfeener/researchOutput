@@ -4,4 +4,4 @@ qemu-system-x86_64 -m 1G -cpu host -enable-kvm -drive file=ubuntu-14-vm.img,thro
 #Between -m and -cpu can be changed to 1G, 2G, 4G, 6G, or 8G.
 
 #Added for convenience in lab computer #16:
-cp ~/summerProject/LINUX_IMAGES/BACKUP_ubuntu-14-vm.img ~/Desktop 
+#cp ~/summerProject/LINUX_IMAGES/BACKUP_ubuntu-14-vm.img ~/Desktop 
