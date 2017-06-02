@@ -1,0 +1,127 @@
+Size 1G, workload E, 10k records:
+
+
+Run 1:
+
+[OVERALL], RunTime(ms), 343526.0
+[OVERALL], Throughput(ops/sec), 2910.987814605008
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 501.0
+[TOTAL_GC_TIME_Copy], Time(ms), 262.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.0762678807426512
+[TOTAL_GCs], Count, 501.0
+[TOTAL_GC_TIME], Time(ms), 262.0
+[TOTAL_GC_TIME_%], Time(%), 0.0762678807426512
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.25
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[INSERT-FAILED], Operations, 48587.0
+[INSERT-FAILED], AverageLatency(us), 2481.871591166361
+[INSERT-FAILED], MinLatency(us), 35.0
+[INSERT-FAILED], MaxLatency(us), 94719.0
+[INSERT-FAILED], 95thPercentileLatency(us), 13047.0
+[INSERT-FAILED], 99thPercentileLatency(us), 25151.0
+[INSERT], Operations, 1237.0
+[INSERT], AverageLatency(us), 537.46645109135
+[INSERT], MinLatency(us), 38.0
+[INSERT], MaxLatency(us), 27391.0
+[INSERT], 95thPercentileLatency(us), 2075.0
+[INSERT], 99thPercentileLatency(us), 4579.0
+[INSERT], Return=OK, 1237
+[INSERT], Return=NOT_FOUND, 48587
+[READ], Operations, 950176.0
+[READ], AverageLatency(us), 1304.7189183898563
+[READ], MinLatency(us), 23.0
+[READ], MaxLatency(us), 164351.0
+[READ], 95thPercentileLatency(us), 8139.0
+[READ], 99thPercentileLatency(us), 19551.0
+[READ], Return=OK, 950176
+
+
+Run 2:
+
+[OVERALL], RunTime(ms), 193830.0
+[OVERALL], Throughput(ops/sec), 5159.160088737553
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 485.0
+[TOTAL_GC_TIME_Copy], Time(ms), 209.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.10782644585461487
+[TOTAL_GCs], Count, 485.0
+[TOTAL_GC_TIME], Time(ms), 209.0
+[TOTAL_GC_TIME_%], Time(%), 0.10782644585461487
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.25
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 2.0
+[CLEANUP], 95thPercentileLatency(us), 2.0
+[CLEANUP], 99thPercentileLatency(us), 2.0
+[INSERT-FAILED], Operations, 48599.0
+[INSERT-FAILED], AverageLatency(us), 1306.2035844358938
+[INSERT-FAILED], MinLatency(us), 34.0
+[INSERT-FAILED], MaxLatency(us), 99263.0
+[INSERT-FAILED], 95thPercentileLatency(us), 5039.0
+[INSERT-FAILED], 99thPercentileLatency(us), 13239.0
+[INSERT], Operations, 1237.0
+[INSERT], AverageLatency(us), 510.5254648342765
+[INSERT], MinLatency(us), 42.0
+[INSERT], MaxLatency(us), 5903.0
+[INSERT], 95thPercentileLatency(us), 1947.0
+[INSERT], 99thPercentileLatency(us), 3361.0
+[INSERT], Return=OK, 1237
+[INSERT], Return=NOT_FOUND, 48599
+[READ], Operations, 950164.0
+[READ], AverageLatency(us), 738.0452995482885
+[READ], MinLatency(us), 24.0
+[READ], MaxLatency(us), 145407.0
+[READ], 95thPercentileLatency(us), 2425.0
+[READ], 99thPercentileLatency(us), 9751.0
+[READ], Return=OK, 950164
+
+
+Run 3:
+
+[OVERALL], RunTime(ms), 327229.0
+[OVERALL], Throughput(ops/sec), 3055.963866283245
+[TOTAL_GCS_MarkSweepCompact], Count, 0.0
+[TOTAL_GC_TIME_MarkSweepCompact], Time(ms), 0.0
+[TOTAL_GC_TIME_%_MarkSweepCompact], Time(%), 0.0
+[TOTAL_GCS_Copy], Count, 496.0
+[TOTAL_GC_TIME_Copy], Time(ms), 268.0
+[TOTAL_GC_TIME_%_Copy], Time(%), 0.08189983161639096
+[TOTAL_GCs], Count, 496.0
+[TOTAL_GC_TIME], Time(ms), 268.0
+[TOTAL_GC_TIME_%], Time(%), 0.08189983161639096
+[CLEANUP], Operations, 4.0
+[CLEANUP], AverageLatency(us), 1.5
+[CLEANUP], MinLatency(us), 1.0
+[CLEANUP], MaxLatency(us), 3.0
+[CLEANUP], 95thPercentileLatency(us), 3.0
+[CLEANUP], 99thPercentileLatency(us), 3.0
+[INSERT-FAILED], Operations, 48527.0
+[INSERT-FAILED], AverageLatency(us), 2278.507140354854
+[INSERT-FAILED], MinLatency(us), 33.0
+[INSERT-FAILED], MaxLatency(us), 241279.0
+[INSERT-FAILED], 95thPercentileLatency(us), 11855.0
+[INSERT-FAILED], 99thPercentileLatency(us), 28559.0
+[INSERT], Operations, 1236.0
+[INSERT], AverageLatency(us), 618.3398058252427
+[INSERT], MinLatency(us), 40.0
+[INSERT], MaxLatency(us), 44831.0
+[INSERT], 95thPercentileLatency(us), 2023.0
+[INSERT], 99thPercentileLatency(us), 5283.0
+[INSERT], Return=OK, 1236
+[INSERT], Return=NOT_FOUND, 48527
+[READ], Operations, 950237.0
+[READ], AverageLatency(us), 1249.1969655991084
+[READ], MinLatency(us), 24.0
+[READ], MaxLatency(us), 610303.0
+[READ], 95thPercentileLatency(us), 5679.0
+[READ], 99thPercentileLatency(us), 20719.0
+[READ], Return=OK, 950237
