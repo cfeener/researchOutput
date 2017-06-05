@@ -1,1 +1,3 @@
 cp -r ~/mapkeeper/leveldb/data/usertable ~
+
+bash ~/researchOutput/gitConfig
