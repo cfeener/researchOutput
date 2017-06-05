@@ -1,2 +1,3 @@
 rm -r ~/mapkeeper/leveldb/data/usertable
-cp -r ~/usertable ~/mapkeeper/leveldb/data
+cd ~
+cp -r usertable ~/mapkeeper/leveldb/data
