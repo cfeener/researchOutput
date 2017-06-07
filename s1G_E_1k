@@ -1,13 +1,4 @@
-Size 1G, workload E, 10k records:
-
-
-Run 1:
-
-
-
-Run 2:
-
-
+Size 1G, workload E, 1k records:
 
 Run 3:
 
@@ -51,10 +42,6 @@ Run 3:
 Size 1G, workload E, 10k records:
 
 
-Run 1:
-
-
-
 Run 2:
 
 [OVERALL], RunTime(ms), 219522.0
@@ -94,11 +81,6 @@ Run 2:
 [INSERT], 95thPercentileLatency(us), 0.0
 [INSERT], 99thPercentileLatency(us), 0.0
 [INSERT], Return=NOT_FOUND, 49976
-
-
-Run 3:
-
-Size 1G, workload E, 10k records:
 
 
 Run 1:
@@ -141,11 +123,3 @@ Run 1:
 [SCAN-FAILED], MaxLatency(us), 22015.0
 [SCAN-FAILED], 95thPercentileLatency(us), 3949.0
 [SCAN-FAILED], 99thPercentileLatency(us), 9951.0
-
-
-Run 2:
-
-
-
-Run 3:
-
