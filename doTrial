@@ -3,5 +3,6 @@ cd ~/mapkeeper/leveldb
 ./mapkeeper_leveldb &
 cd ~/YCSB
 #echo $'\n\nNew run:\n' >> ~/researchOutput/s1G_D_1M
-./bin/ycsb run mapkeeper -p mapkeeper.port=9090 -P workloads/workloade -threads 4 >> ~/researchOutput/s1G_E_1M
+./bin/ycsb load mapkeeper -p mapkeeper.port=9090 -P workloads/workloadd -threads 4 >> ~/researchOutput/s1G_Dtest
+./bin/ycsb run mapkeeper -p mapkeeper.port=9090 -P workloads/workloadd -threads 4 >> ~/researchOutput/s1G_Dtest
 bash ~/researchOutput/reloadUsertable
