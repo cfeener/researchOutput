@@ -1,5 +1,5 @@
 bash clearCache
-qemu-system-x86_64 -m 1G -cpu host -enable-kvm -drive file=ubuntu-14-vm.img,throttling.iops-total=100000
+qemu-system-x86_64 -m 1G -cpu host -enable-kvm -drive file=~/Desktop/ubuntu-14-vm.img,throttling.iops-total=100000
 
 #Between -m and -cpu can be changed to 1G, 2G, 4G, 6G, or 8G.
 
