@@ -5,7 +5,7 @@ bash clearCache
 #NOTE: Between -m and -cpu can be changed to 1G, 2G, 4G, 6G, or 8G.
 
 #NOTE: To run with kernel (comment out until testing of YCSB is done):
-qemu-system-x86_64 -kernel ~/Desktop/linux-4.11 -m 1G -cpu host -enable-kvm -drive file=~/Desktop/ubuntu-14-vm.img,throttling.iops-total=100000
+sudo qemu-system-x86_64 -kernel /boot/vmlinuz-`uname -r`
 
 #NOTE: Added for convenience in lab computer #16 (usually commented out):
 #cp ~/summerProject/LINUX_IMAGES/BACKUP_ubuntu-14-vm.img ~/Desktop 
