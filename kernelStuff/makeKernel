@@ -1,0 +1,5 @@
+#Get and uncompress kernel, such as linux-4.11 (use something like "xzfv"), 
+#and go to resulting directory to execute the following commands:
+make x86_64_defconfig
+make kvmconfig
+make -j 8
