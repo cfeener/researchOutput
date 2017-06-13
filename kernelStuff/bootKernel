@@ -1,5 +1,5 @@
 #Run this inside the directory that 'makeKernel' was executed.
 #WARNING: Versions of kernel and image (3.13.0-24) may need to be same.
-cd ~/Desktop/linux-3.13
+cd ~/Desktop/linux-4.11
 
-qemu-system-x86_64 -kernel arch/x86/boot/bzImage -hda ~/Desktop/ubuntu-14-vm.img -append "root=/dev/sda"
+qemu-system-x86_64 -kernel arch/x86/boot/bzImage -hda ~/Desktop/kernel-4.11-vm.img -append "root=/dev/sda"
