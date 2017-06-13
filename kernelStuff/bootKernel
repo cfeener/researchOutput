@@ -1,3 +1,5 @@
 #Run this inside the directory that 'makeKernel' was executed.
-#WARNING: Must be synced kernel-image combo.
-qemu-system-x86_64 -kernel arch/x86/boot/bzImage -hda ubuntu-14-vm.img -append "root=/dev/sda"
+#WARNING: Versions of kernel and image (3.13.0-24) may need to be same.
+cd ~/Desktop/linux-3.13
+
+qemu-system-x86_64 -kernel arch/x86/boot/bzImage -hda ~/Desktop/ubuntu-14-vm.img -append "root=/dev/sda"
