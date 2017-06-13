@@ -1,7 +1,7 @@
 bash clearCache
 
 #NOTE: Preliminary testing of qemu and YCSB (comment out when unnecessary):
-qemu-system-x86_64 -m 1G -cpu host -enable-kvm -drive file=~/Desktop/ubuntu-14-vm.img,throttling.iops-total=100000
+qemu-system-x86_64 -m 1G -cpu host -enable-kvm -drive file=~/Desktop/kernel-4.11-vm.img,throttling.iops-total=100000
 #NOTE: Between -m and -cpu can be changed to 1G, 2G, 4G, 6G, or 8G.
 
 #NOTE: To run with kernel (comment out until testing of YCSB is done):
