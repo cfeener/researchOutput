@@ -1,4 +1,4 @@
-IMG=ubuntu-14-vm.img
+IMG=qemu-img.img
 DIR=mount-point.dir
 qemu-img create $IMG 1g
 mkfs.ext2 $IMG
