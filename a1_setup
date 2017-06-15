@@ -1,3 +1,5 @@
 cp -r ~/mapkeeper/leveldb/data/usertable ~
 
 bash ~/researchOutput/gitConfig
+
+sudo apt-get install libncurses5-dev
