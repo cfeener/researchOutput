@@ -1,9 +1,9 @@
-echo $'Size 1G, workload D, 1M records test:' >> ~/researchOutput/s1G_Dtest
-echo $'\n\nRun 1:\n' >> ~/researchOutput/s1G_Dtest
+echo $'Kernel, 1G, workload B, 1M records test:' >> ~/researchOutput/k1G_B_1M
+echo $'\n\nRun 1:\n' >> ~/researchOutput/k1G_B_1M
 bash doTrial
-echo $'\n\nRun 2:\n' >> ~/researchOutput/s1G_Dtest
+echo $'\n\nRun 2:\n' >> ~/researchOutput/k1G_B_1M
 bash doTrial
-echo $'\n\nRun 3:\n' >> ~/researchOutput/s1G_Dtest
+echo $'\n\nRun 3:\n' >> ~/researchOutput/k1G_B_1M
 bash doTrial
 
 # echo $'\n\nRun 4:\n' >> ~/researchOutput/s1G_F_10k
