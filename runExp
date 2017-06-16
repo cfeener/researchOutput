@@ -5,8 +5,3 @@ echo $'\n\nRun 2:\n' >> ~/researchOutput/k1G_B_1M
 bash doTrial
 echo $'\n\nRun 3:\n' >> ~/researchOutput/k1G_B_1M
 bash doTrial
-
-# echo $'\n\nRun 4:\n' >> ~/researchOutput/s1G_F_10k
-# bash doTrial
-# echo $'\n\nRun 5:\n' >> ~/researchOutput/s1G_F_10k
-# bash doTrial

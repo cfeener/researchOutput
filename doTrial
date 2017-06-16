@@ -2,5 +2,5 @@ bash clearCache
 cd ~/mapkeeper/leveldb
 ./mapkeeper_leveldb &
 cd ~/YCSB
-./bin/ycsb load mapkeeper -p mapkeeper.port=9090 -P workloads/workloadb -threads 4 >> ~/researchOutput/k1G_B_1M 	# 2>&1
+./bin/ycsb load mapkeeper -p mapkeeper.port=9090 -P workloads/workloadc -threads 4 >> ~/researchOutput/k1G_C_1M 	2>&1
 bash ~/researchOutput/reloadUsertable
