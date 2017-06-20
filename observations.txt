@@ -5,4 +5,4 @@ In handle_pte_fault():
  - Within else-statement, the first if-statement is rarely ever executed.
 CAUTION: Within else-statement, the main code and second if-statement are constantly executed.
 
- - "if (!vmf->pte)": if- and else-statements execute only during startup.
+ - "if (!vmf->pte)": if- and else-statements execute around commands.
