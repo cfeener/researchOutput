@@ -31,3 +31,5 @@ static int vm_mem_test_init(void)
 
 }
 
+module_init(vm_mem_test_init);
+module_exit(vm_mem_test_init);
