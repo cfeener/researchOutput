@@ -11,6 +11,8 @@
 #include <linux/fs.h>	//For filp
 #include <asm/uaccess.h>	//For segment descriptors.
 
+#include <linux/syscalls.h>
+#include <linux/fcntl.h>
 
 static int virtToPhys(void)
 {
