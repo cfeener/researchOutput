@@ -13,10 +13,13 @@
 
 #include <linux/syscalls.h>
 #include <linux/fcntl.h>
-
+/*
 static int virtToPhys(void)
 {
+	mm_segment_t old_fs;
 	int fd;
+	old_fs = get_fs();
+	set_fs(KERNEL_DS);
 	//From http://www.linuxjournal.com/node/8110/print
 	fd = sys_open("/proc/9643/maps", O_RDONLY, 0);
 	if (fd >=0) {
@@ -25,12 +28,13 @@ static int virtToPhys(void)
 		sys_close(fd);
 	}
 
+	set_fs(old_fs);
 	return 0;
 }
 
 module_init(virtToPhys);
 module_exit(virtToPhys);
-/*
+*/
 int init_module(void) //From https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
 {
     // Create variables
@@ -68,7 +72,7 @@ void cleanup_module(void)
 {
     printk(KERN_INFO "My module is unloaded\n");
 }
-*/
+
 /*
 static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/msg53705.html
 {
