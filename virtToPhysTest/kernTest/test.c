@@ -55,7 +55,8 @@ module_exit(readMaps);
 static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/msg53705.html
 {
 
-//	void *km;
+	void *km;
+	km = 0x400000;	//Virtual address of qemu bash at 2 pm, 6/28/2017. Change as necessary.
 
 	printk(KERN_ALERT "vm mem test init\n");
 
@@ -65,10 +66,10 @@ static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/m
 		printk(KERN_ALERT "Could not kmalloc\n");
 		return -1;
 	} else {
-		printk(KERN_ALERT "Allocated\n");
+//		printk(KERN_ALERT "Allocated\n");
 		printk(KERN_ALERT "Virtual addr : %x\n",(unsigned int)km);
 		printk(KERN_ALERT "Kernel physical addr : 0x%x\n",virt_to_phys(km));	//Here is the core concept!
-		kfree(km);
+//		kfree(km);
 	}
 
 	return 0;
