@@ -1,12 +1,15 @@
 #include <linux/init.h>
-#include <linux/kernel.h>
+#include <linux/kernel.h>	//For kernel info
 #include <linux/printk.h>
-#include <linux/module.h>
+#include <linux/module.h>	//For all modules.
 #include <linux/gfp.h>
 #include <linux/types.h>
 #include <linux/mm.h>
 #include <linux/mm_types.h>
 #include <linux/slab.h>
+
+#include <linux/fs.h>	//For filp
+#include <asm/uaccess.h>	//For segment descriptors.
 
 static int vm_mem_test_init(void)
 {
