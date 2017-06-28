@@ -56,7 +56,7 @@ static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/m
 {
 
 	void *km;
-	km = 0x400000;	//Virtual address of qemu bash at 2 pm, 6/28/2017. Change as necessary.
+	km = 0xbbc000;	//Virtual address of qemu bash at 2 pm, 6/28/2017. Change as necessary.
 
 	printk(KERN_ALERT "vm mem test init\n");
 
