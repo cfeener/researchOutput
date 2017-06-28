@@ -13,29 +13,10 @@
 
 #include <linux/syscalls.h>
 #include <linux/fcntl.h>
+
+//See also http://www.linuxjournal.com/node/8110/print
 /*
-static int virtToPhys(void)
-{
-	mm_segment_t old_fs;
-	int fd;
-	old_fs = get_fs();
-	set_fs(KERNEL_DS);
-	//From http://www.linuxjournal.com/node/8110/print
-	fd = sys_open("/proc/9643/maps", O_RDONLY, 0);
-	if (fd >=0) {
-		
-
-		sys_close(fd);
-	}
-
-	set_fs(old_fs);
-	return 0;
-}
-
-module_init(virtToPhys);
-module_exit(virtToPhys);
-*/
-int second(void) //From https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
+int readMaps(void) //From https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
 {
     // Create variables
     struct file *f;
@@ -48,7 +29,7 @@ int second(void) //From https://www.howtoforge.com/reading-files-from-the-linux-
     // To see in /var/log/messages that the module is operating
     printk(KERN_INFO "My module is loaded\n");
     // Obviously it is much smaller than the 128 bytes, but hell with it =)
-    f = filp_open("/proc/9643/maps", O_RDONLY, 0);	//XXX get_fs may be for something else.
+    f = filp_open("/proc/9643/maps", O_RDONLY, 0);	//XXX Changed for CF's purposes.
     if(f == NULL)
         printk(KERN_ALERT "filp_open error!!.\n");
     else{
@@ -67,33 +48,33 @@ int second(void) //From https://www.howtoforge.com/reading-files-from-the-linux-
     return 0;
 }
 
-module_init(second);
-module_exit(second);
-
-/*
+module_init(readMaps);
+module_exit(readMaps);
+*/
+// Virt_to_phys works perfectly, but of little use currently.
 static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/msg53705.html
 {
 
-    void *km;
+//	void *km;
 
-    printk(KERN_ALERT "vm mem test init\n");
+	printk(KERN_ALERT "vm mem test init\n");
 
-    km = kmalloc(1,GFP_KERNEL);
+//	km = kmalloc(1,GFP_KERNEL);
 
-    if(km == NULL) {
-        printk(KERN_ALERT "Could not kmalloc\n");
-        return -1;
-    } else {
-        printk(KERN_ALERT "Allocated\n");
-        printk(KERN_ALERT "Virtual addr : %x\n",(unsigned int)km);
-        printk(KERN_ALERT "Kernel physical addr : 0x%x\n",virt_to_phys(km));	//Here is the core concept!
-        kfree(km);
-    }
+	if(km == NULL) {
+		printk(KERN_ALERT "Could not kmalloc\n");
+		return -1;
+	} else {
+		printk(KERN_ALERT "Allocated\n");
+		printk(KERN_ALERT "Virtual addr : %x\n",(unsigned int)km);
+		printk(KERN_ALERT "Kernel physical addr : 0x%x\n",virt_to_phys(km));	//Here is the core concept!
+		kfree(km);
+	}
 
-  return 0;
+	return 0;
 
 }
 
 module_init(vm_mem_test_init);
 module_exit(vm_mem_test_init);
-*/
+
