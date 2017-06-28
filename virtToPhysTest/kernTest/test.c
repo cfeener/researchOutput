@@ -35,7 +35,7 @@ static int virtToPhys(void)
 module_init(virtToPhys);
 module_exit(virtToPhys);
 */
-int init_module(void) //From https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
+int second(void) //From https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
 {
     // Create variables
     struct file *f;
@@ -47,7 +47,6 @@ int init_module(void) //From https://www.howtoforge.com/reading-files-from-the-l
         buf[i] = 0;
     // To see in /var/log/messages that the module is operating
     printk(KERN_INFO "My module is loaded\n");
-    // I am using Fedora and for the test I have chosen following file
     // Obviously it is much smaller than the 128 bytes, but hell with it =)
     f = filp_open("/proc/9643/maps", O_RDONLY, 0);	//XXX get_fs may be for something else.
     if(f == NULL)
@@ -68,10 +67,8 @@ int init_module(void) //From https://www.howtoforge.com/reading-files-from-the-l
     return 0;
 }
 
-void cleanup_module(void)
-{
-    printk(KERN_INFO "My module is unloaded\n");
-}
+module_init(second);
+module_exit(second);
 
 /*
 static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/msg53705.html
