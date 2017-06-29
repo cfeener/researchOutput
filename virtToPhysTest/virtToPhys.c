@@ -16,40 +16,7 @@
 
 //See also http://www.linuxjournal.com/node/8110/print
 /*
-int readMaps(void) //From https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
-{
-    // Create variables
-    struct file *f;
-    char buf[128];
-    mm_segment_t fs;
-    int i;
-    // Init the buffer with 0
-    for(i=0;i<128;i++)
-        buf[i] = 0;
-    // To see in /var/log/messages that the module is operating
-    printk(KERN_INFO "My module is loaded\n");
-    // Obviously it is much smaller than the 128 bytes, but hell with it =)
-    f = filp_open("/proc/9643/maps", O_RDONLY, 0);	//XXX Changed for CF's purposes.
-    if(f == NULL)
-        printk(KERN_ALERT "filp_open error!!.\n");
-    else{
-        // Get current segment descriptor
-        fs = get_fs();
-        // Set segment descriptor associated to kernel space
-        set_fs(get_ds());
-        // Read the file
-        f->f_op->read(f, buf, 128, &f->f_pos);
-        // Restore segment descriptor
-        set_fs(fs);
-        // See what we read from file
-        printk(KERN_INFO "buf:%s\n",buf);
-    }
-    filp_close(f,NULL);
-    return 0;
-}
-
-module_init(readMaps);
-module_exit(readMaps);
+//See https://www.howtoforge.com/reading-files-from-the-linux-kernel-space-module-driver-fedora-14
 */
 // Virt_to_phys works perfectly, but of little use currently.
 static int vm_mem_test_init(void)	//From https://www.spinics.net/lists/newbies/msg53705.html

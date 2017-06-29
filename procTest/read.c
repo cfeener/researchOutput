@@ -1,5 +1,5 @@
 /* Christopher Feener
- * This is a test file for reading /proc/$(pid)/maps.
+ * This is a test file for reading XXX /proc/$(pid)/maps.
  * It shall convert virtual addresses to physical addresses.
 */
 #include <stdio.h>
