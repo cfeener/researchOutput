@@ -7,12 +7,12 @@
 
 static int physToPID(void)
 {
-	struct page *p = kmalloc(sizeof(struct page));	//Not sure if kmalloc is necessary.
+	struct page *p = kmalloc(sizeof(struct page), GFP_KERNEL);	//Not sure if kmalloc is necessary.
 
 	int p_index;
 	p_index = p / PAGE_SIZE;	//PAGE_SIZE may be 4096, or 4k.
 
-	int test = p->mapcount;
+	int test = p->_mapcount;	//p->_mapcount works!
 }
 
 module_init(physToPID);
