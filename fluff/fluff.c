@@ -13,8 +13,7 @@ int init_module(void)
 	p_index = (long long int)p / PAGE_SIZE;	//PAGE_SIZE may be 4096, or 4k.
 	printk(KERN_ALERT "p = %p\nPAGE_SIZE = %lu\np_index = %llx\n", p, PAGE_SIZE, p_index);
 
-	if ( p->_mapcount > 0)
-		printk(KERN_ALERT "YES\n");	//p->_mapcount works!
+	printk(KERN_ALERT "Atomic: %d\n", atomic_read(&p->_mapcount));
 
 	return 0;
 }
