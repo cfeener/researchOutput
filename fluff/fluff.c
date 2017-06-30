@@ -18,14 +18,14 @@ int init_module(void)
 	void * fileOrProc;
 	long long int LSB;
 	long long int pmapping;
-//	long long int p_index_addr;
-//	void * p_index;
+	long long int p_addr;
+	long long int phys_addr;
 
-	//Find page descriptor.
-//	p_index_addr = (long long int)p / PAGE_SIZE;	//PAGE_SIZE may be 4096, or 4k.
-//	p_index = (void *)p_index_addr;
+	//REVERSE ENGINEERING OF "Find page descriptor".
+	p_addr = (long long int)p;
+	phys_addr = p_addr * PAGE_SIZE;
 	
-	printk(KERN_ALERT "p = %p\n", p);
+	printk(KERN_ALERT "virt_to_phys(p) = %llx\nphys_addr = %llx\np = %p\n", virt_to_phys(p), phys_addr, p);
 
 	printk(KERN_ALERT "p->_mapcount: %d\n", atomic_read(&p->_mapcount));
 
