@@ -1,0 +1,4 @@
+make
+bash INSERT
+bash REMOVE
+make clean
