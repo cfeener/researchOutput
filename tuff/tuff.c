@@ -13,8 +13,9 @@
 int init_module(void)
 {
 	//Start with a physical address:
-	void * phys_addr = (void *) 0x10000;
-	
+	phys_addr_t phys_addr = 0x10000;
+	void * ptr = (void *)phys_addr;
+	printk(KERN_ALERT "phys_addr = %p\nvirt_addr = %p\n", ptr, phys_to_virt(phys_addr));
 /*
 	long long int page_index_addr; 
 	struct page * page_index;
