@@ -1,5 +1,6 @@
 /* Christopher Feener
- * This is a test for phys addr - virtual addr lookups.
+ * Fluff.c
+ * This tests page descriptor to perhaps v_addr.
  */
 
 #include <linux/init.h>
