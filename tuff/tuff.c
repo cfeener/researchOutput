@@ -14,7 +14,8 @@ int init_module(void)
 {
 	//Start with a physical address:
 	void * phys_addr = (void *) 0x10000;
-
+	
+/*
 	long long int page_index_addr; 
 	struct page * page_index;
 	long long int LSB;
@@ -41,7 +42,7 @@ int init_module(void)
 
 	user = (void *)page_mapping;	//Set address.
 	printk(KERN_ALERT "File = %p\n", user);
-
+*/
 	return 0;
 }
 

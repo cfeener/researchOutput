@@ -1,1 +1,1 @@
-sudo insmod ./test.ko
+sudo insmod ./virtToPhys.ko

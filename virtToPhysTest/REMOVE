@@ -1,1 +1,1 @@
-sudo rmmod test
+sudo rmmod virtToPhys
