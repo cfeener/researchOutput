@@ -33,11 +33,12 @@ int init_module(void)
 	printk(KERN_ALERT "page descriptor index = %p\n", page_index);
 
 	printk(KERN_ALERT "page_index->_mapcount: %d\n", atomic_read(&page_index->_mapcount));
-/*
+
 	if ( atomic_read(&page_index->_mapcount) < 0 ) {
 		printk(KERN_ALERT "Error: _mapcount too small.\n");
 		return 1;
 	}
+/*	//XXX ERROR: _mapcount is giving incorrect values.
 	//Read *mapping:
 	printk(KERN_ALERT "page->mapping = %p\n", page_index->mapping);
 	LSB = ((unsigned long)page_index->mapping) & 1;
