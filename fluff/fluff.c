@@ -1,6 +1,6 @@
 /* Christopher Feener
  * Fluff.c
- * This tests page descriptor to perhaps v_addr.
+ * This tests page descriptor to virtual address.
  */
 
 #include <linux/init.h>
@@ -12,9 +12,10 @@
 
 int init_module(void)
 {
-	//Find physical address. Or simply start with page descriptor:
+	//Find physical address. (skipped)
+	//Or simply start with page descriptor:
 	struct page *p = kmalloc(sizeof(struct page), GFP_KERNEL);	//Not sure if kmalloc is necessary.
-	phys_addr_t ptr = (phys_addr_t)p;
+	phys_addr_t ptr = virt_to_phys(p);
 
 	void * fileOrProc;
 	long long int LSB;
@@ -26,7 +27,7 @@ int init_module(void)
 //	p_addr = (long long int)p;
 //	phys_addr = p_addr * PAGE_SIZE;
 	
-	printk(KERN_ALERT "phys_to_virt(ptr) = %p\np = %p\n", phys_to_virt(ptr), p);
+	printk(KERN_ALERT "phys_to_virt(ptr) = %p\np = %p\nvirt_to_phys(p) = %llx\n", phys_to_virt(ptr), p, virt_to_phys(p));
 
 	printk(KERN_ALERT "p->_mapcount: %d\n", atomic_read(&p->_mapcount));
 

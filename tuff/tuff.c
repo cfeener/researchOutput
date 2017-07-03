@@ -16,7 +16,7 @@ int init_module(void)
 	phys_addr_t phys_addr = 0x10000;
 	void * ptr = (void *)phys_addr;
 	printk(KERN_ALERT "phys_addr = %p\nvirt_addr = %p\n", ptr, phys_to_virt(phys_addr));
-/*
+
 	long long int page_index_addr; 
 	struct page * page_index;
 	long long int LSB;
@@ -43,7 +43,7 @@ int init_module(void)
 
 	user = (void *)page_mapping;	//Set address.
 	printk(KERN_ALERT "File = %p\n", user);
-*/
+
 	return 0;
 }
 
