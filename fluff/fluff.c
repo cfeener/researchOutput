@@ -17,11 +17,12 @@ int init_module(void)
 	struct page *p = kmalloc(sizeof(struct page), GFP_KERNEL);	//kmalloc is necessary.
 	phys_addr_t ptr = virt_to_phys(p);
 
-	struct anon_vma * VMA;
 	long long int LSB;
 	long long int pmapping;
 //	long long int p_addr;
 //	long long int phys_addr;
+	struct anon_vma * VMA;
+	struct address_space * File;
 
 	//REVERSE ENGINEERING OF "Find page descriptor".
 //	p_addr = (long long int)p;
@@ -38,15 +39,17 @@ int init_module(void)
 	//Read *mapping:
 	printk(KERN_ALERT "p->mapping = %p\n", p->mapping);
 	LSB = ((unsigned long)p->mapping) & 1;
-	pmapping = ((unsigned long)p->mapping) >> 1;	//mask low bit
 	if ( LSB == 1 ) {
 		printk(KERN_ALERT "VMA");
+		pmapping = ((unsigned long)p->mapping) >> 1;	//mask low bit
+		VMA = (struct anon_vma *)pmapping;	//Set address.
 	} else {
 		printk(KERN_ALERT "File (or device)");
+		pmapping = ((unsigned long)p->mapping);	//mask low bit
+		File = (void *)pmapping;
 	}
 	printk(KERN_ALERT " address = %llx, lowest bit = %llx", pmapping, LSB);
 
-	VMA = (struct anon_vma *)pmapping;	//Set address.
 
 	return 0;
 }
