@@ -8,11 +8,14 @@
 int main(int argc, char **argv)
 {
 	if (argc != 2) {
-		printf("Not enough arg's.\n");
+		printf("Not enough arg's. Please enter PID\n");
 		return 1;
 	}
 	FILE *fin = NULL;
-	if ( (fin = fopen(argv[1], "r")) ==NULL ) {
+	char filename[100];
+	sprintf(filename, "/proc/%s/maps", argv[1]);
+	printf("%s\n", filename);
+	if ( (fin = fopen(filename, "r")) ==NULL ) {
 		printf("Could not open file.\n");
 		return 1;
 	}
