@@ -13,9 +13,12 @@
 int init_module(void)
 {
 	//Start with a physical address:
-	phys_addr_t phys_addr = 0x10000;
+	phys_addr_t phys_addr;
+	phys_addr_t addend1 = 0xffff880000000000;
+	phys_addr_t addend2 = 0x10000;
+	phys_addr = addend1 + addend2;
 	void * ptr = (void *)phys_addr;
-	printk(KERN_ALERT "phys_addr = %p\nvirt_addr = %p\n", ptr, phys_to_virt(phys_addr));
+	printk(KERN_ALERT "phys_addr = %p\nvirt_addr = %p\n", ptr, (void *)phys_to_virt(phys_addr));
 
 	long long int page_index_addr; 
 	struct page * page_index;
@@ -24,13 +27,13 @@ int init_module(void)
 	void * user;
 
 	//Find page descriptor.
-	page_index_addr = (long long int)phys_addr / PAGE_SIZE;	//PAGE_SIZE may be 4096, or 4k.
+	page_index_addr = (long long int)addend2 / PAGE_SIZE + (long long int)addend1;	//PAGE_SIZE may be 4096, or 4k.
 	page_index = (struct page *)page_index_addr;
 	
 	printk(KERN_ALERT "page descriptor index = %p\n", page_index);
 
 	printk(KERN_ALERT "page_index->_mapcount: %d\n", atomic_read(&page_index->_mapcount));
-
+/*
 	if ( atomic_read(&page_index->_mapcount) < 0 ) {
 		printk(KERN_ALERT "Error: _mapcount too small.\n");
 		return 1;
@@ -43,7 +46,7 @@ int init_module(void)
 
 	user = (void *)page_mapping;	//Set address.
 	printk(KERN_ALERT "File = %p\n", user);
-
+*/
 	return 0;
 }
 
