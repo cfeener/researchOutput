@@ -1,9 +1,11 @@
 /* Christopher Feener
  * Tuff.c
  * This is a test for phys addr - to - virtual addr lookups. 
- * It attempts to follow the directions from the site 
+ * It attempts to follow the directions from the following site: 
+ * https://www3.cs.stonybrook.edu/~porter/courses/cse506/f11/slides/pfra.pdf
  * This is an algorithm of taking an arbitrary physical address,
- * dividing it up, and type casting.
+ * dividing it up, and type casting. The other method of simply using 
+ * phys_to_virt() and virt_to_phys() seems to work better.
  */
 
 #include <linux/init.h>
