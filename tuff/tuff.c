@@ -1,6 +1,9 @@
 /* Christopher Feener
  * Tuff.c
- * This is a test for phys addr - to - virtual addr lookups.
+ * This is a test for phys addr - to - virtual addr lookups. 
+ * It attempts to follow the directions from the site 
+ * This is an algorithm of taking an arbitrary physical address,
+ * dividing it up, and type casting.
  */
 
 #include <linux/init.h>
