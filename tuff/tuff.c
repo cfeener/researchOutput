@@ -23,7 +23,8 @@ int init_module(void)
 	printk(KERN_ALERT "vm_start: %lu\n\n", task->mm->mmap->vm_start);
 
 	list_for_each(list, &current->children) {	//Iterate from current
-		task = list_entry(list, struct task_struct, sibling);
+//		task = list_entry(list, struct task_struct, sibling);
+//		list_entry(task->list.next	//XXX Continue!
 		printk(KERN_ALERT "Name: %s, PID: %d\n\n", task->comm, task->pid);
 		printk(KERN_ALERT "vm_start: %lu\n\n", task->mm->mmap->vm_start);
 	}
