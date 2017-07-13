@@ -20,14 +20,14 @@ int init_module(void)
 	task = current;
 
 	printk(KERN_ALERT "Name: %s, PID: %d", task->comm, task->pid);
+	printk(KERN_ALERT "vm_start: %lu\n\n", task->mm->mmap->vm_start);
 
-//	while (task->pid != 0) {
-	list_for_each(list, &current->children) {
+	list_for_each(list, &current->children) {	//Iterate from current
 		task = list_entry(list, struct task_struct, sibling);
-//		task = task->parent; 	//Try child, next, and finally actual iterator.
-		printk(KERN_ALERT "Name: %s, PID: %d", task->comm, task->pid);
+		printk(KERN_ALERT "Name: %s, PID: %d\n\n", task->comm, task->pid);
+		printk(KERN_ALERT "vm_start: %lu\n\n", task->mm->mmap->vm_start);
 	}
-	//->mm->mmap->anon_vma;
+	//->mm->mmap->vm_start;
 
 	return 0;
 }
