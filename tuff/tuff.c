@@ -22,13 +22,20 @@ int init_module(void)
 	printk(KERN_ALERT "Name: %s, PID: %d", task->comm, task->pid);
 	printk(KERN_ALERT "vm_start: %lu\n\n", task->mm->mmap->vm_start);
 
-	list_for_each(list, &current->children) {	//Iterate from current
+	//Iterate from current:
+	list_for_each(list, &current->children) {
 //		task = list_entry(list, struct task_struct, sibling);
 //		list_entry(task->list.next	//XXX Continue!
 		printk(KERN_ALERT "Name: %s, PID: %d\n\n", task->comm, task->pid);
 		printk(KERN_ALERT "vm_start: %lu\n\n", task->mm->mmap->vm_start);
 	}
-	//->mm->mmap->vm_start;
+
+	struct vm_area_struct *vma = task->mm->mmap;
+	struct page *page = kmalloc(sizeof(page), GFP_KERNEL);
+	if (page_address_in_vma(page, vma) != -EFAULT)
+		printk(KERN_ALERT "Page is not in VMA.\n");
+	else
+		printk(KERN_ALERT "Found!\n");
 
 	return 0;
 }
