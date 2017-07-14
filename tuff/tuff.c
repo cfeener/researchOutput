@@ -31,8 +31,8 @@ int init_module(void)
 	}
 
 	struct vm_area_struct *vma = task->mm->mmap;
-	struct page *page = kmalloc(sizeof(page), GFP_KERNEL);
-	if (page_address_in_vma(page, vma) != -EFAULT)
+	struct page *page = kmalloc(sizeof(struct page), GFP_KERNEL);
+	if (page_address_in_vma(page, vma) == -EFAULT)
 		printk(KERN_ALERT "Page is not in VMA.\n");
 	else
 		printk(KERN_ALERT "Found!\n");
