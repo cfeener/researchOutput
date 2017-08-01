@@ -1,8 +1,0 @@
-Might not need old version of kernel. Just use 4.11.
-
-In VM, do the following:
-
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.11.tar.xz 
-
-sudo apt-cache search linux-image
-sudo apt-get install linux-image-$version
