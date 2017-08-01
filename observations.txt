@@ -1,8 +1,0 @@
-In handle_pte_fault():
-
- - First if statement is executed mainly after a command, but before its output. 
- - Else statement occurs almost every command, coming before, during, and after its output.
- - Within else-statement, the first if-statement is rarely ever executed.
-CAUTION: Within else-statement, the main code and second if-statement are constantly executed.
-
- - "if (!vmf->pte)": if- and else-statements execute around commands.
