@@ -1,4 +1,0 @@
-make
-bash INSERT
-bash REMOVE
-bash make clean
