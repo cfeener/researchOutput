@@ -1,4 +1,5 @@
 /* Christopher Feener
+ * This cannot be used for kernel purposes!!! It is useless.
  * This is a test file for reading XXX /proc/$(pid)/maps.
  * It shall convert virtual addresses to physical addresses.
 */
