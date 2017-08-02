@@ -1,0 +1,2 @@
+convert heic1502a.psb -resize 1% huge.jpg
+#convert world.topo.bathy.200407.3x21600x10800.jpg -resize 1% huge.jpg 
