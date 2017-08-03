@@ -4,7 +4,7 @@ bash ~/Desktop/researchOutput/clearCache
 
 cd ~/Desktop/linux-4.11
 
-#qemu-system-x86_64 -m 1G -cpu host -enable-kvm \
-#	-hda ~/Desktop/kernel-4.11-vm.img  \
-#	-kernel arch/x86/boot/bzImage -append "root=/dev/sda single"
-qemu-system-x86_64 -m 1G -cpu host -enable-kvm -hda ~/Desktop/kernel-4.11-vm.img 
+qemu-system-x86_64 -m 1G -cpu host -enable-kvm \
+	-hda ~/Desktop/qemu-img.img  \
+	-kernel arch/x86/boot/bzImage -append "root=/dev/sda single"
+#qemu-system-x86_64 -m 1G -cpu host -enable-kvm -hda ~/Desktop/kernel-4.11-vm.img 
