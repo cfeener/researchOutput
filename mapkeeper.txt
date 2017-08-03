@@ -31,7 +31,7 @@ $sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-de
    git clone git://github.com/m1ch1/mapkeeper.git
    export MKROOT=`pwd`/mapkeeper
    cd $MKROOT/thrift
-   make
+   make	#Got up to HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 5. Install LevelDB
    
