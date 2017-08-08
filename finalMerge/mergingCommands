@@ -1,0 +1,9 @@
+ 2001  git clone https://gitlab.encs.vancouver.wsu.edu/xuechenzhang/hybrid-swapp
+ing.git
+ 2003  cd hybrid-swapping/
+ 2005  git merge ../researchOutput/master
+ 2006  git checkout master
+ 2007  git remote add r1remote https://gitlab.encs.vancouver.wsu.edu/c.feener/researchOutput.git
+ 2008  git fetch r1remote
+ 2010  git merge r1remote/master 
+ 2013  git push
