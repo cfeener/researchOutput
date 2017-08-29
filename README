@@ -1,0 +1,20 @@
+Author: Christopher Feener
+
+Email: christopher.feener@wsu.edu
+
+Description:
+		The file changes were made in linux-4.11/mm/vmscan.c from
+	the linux 4.11 kernel, in the function "shrink_page_list()". 
+	Sections of changes started at lines 16, 976, 1022, and 1367.
+ 
+		The report contains information on what was studied, what
+	was used in setup of experiments, and the results of the experiments.
+
+		The poster presents more of the conceptual details behind
+	what was studied, as well as the results.
+
+Files attached:
+	vmscan.c
+	README
+	summerReport.pdf
+	Final_CF_Poster_Zhang.pdf
